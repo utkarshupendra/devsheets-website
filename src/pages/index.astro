@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Stats from '../components/Stats';
+import Features from '../components/Features';
+import UseCases from '../components/UseCases';
+import TechStack from '../components/TechStack';
+import Comparison from '../components/Comparison';
+import QuickStart from '../components/QuickStart';
+import CTA from '../components/CTA';
+import Footer from '../components/Footer';
+---
+
+<Layout 
+  title="DevSheets - Developer-Friendly Spreadsheet for Data Analysis" 
+  description="Analyze CSV, Excel, and JSON data with expression-based filters, transparent pivots, and visual pipelines. Open source, cross-platform, built for developers."
+  keywords="spreadsheet software, data analysis tool, CSV viewer, Excel alternative, developer tools, open source spreadsheet, data visualization, TypeScript, React, pivot tables, data filtering"
+>
+  <Navbar client:load />
+  <Hero client:load />
+  <Stats client:visible />
+  <Features client:visible />
+  <UseCases client:visible />
+  <TechStack client:visible />
+  <Comparison client:visible />
+  <QuickStart client:visible />
+  <CTA client:visible />
+  <Footer />
+</Layout>
