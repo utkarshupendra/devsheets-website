@@ -41,9 +41,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          Analyze CSV, Excel, and JSON data with expression-based filters,
+          Built for developers, not accountants. Filter with code expressions,
           <br className="hidden sm:block" />
-          <span className="sm:inline"> </span>transparent pivots, and a visual transformation pipeline.
+          <span className="sm:inline"> </span>see your data pipeline, and analyze CSV, Excel, and JSON files your way.
         </motion.p>
 
         <motion.div

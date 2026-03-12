@@ -5,25 +5,29 @@ import Hero from '../components/Hero';
 import Stats from '../components/Stats';
 import Features from '../components/Features';
 import UseCases from '../components/UseCases';
+import SocialProof from '../components/SocialProof';
 import TechStack from '../components/TechStack';
 import Comparison from '../components/Comparison';
+import Blog from '../components/Blog';
 import QuickStart from '../components/QuickStart';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 ---
 
 <Layout 
-  title="DevSheets - Developer-Friendly Spreadsheet for Data Analysis" 
-  description="Analyze CSV, Excel, and JSON data with expression-based filters, transparent pivots, and visual pipelines. Open source, cross-platform, built for developers."
-  keywords="spreadsheet software, data analysis tool, CSV viewer, Excel alternative, developer tools, open source spreadsheet, data visualization, TypeScript, React, pivot tables, data filtering"
+  title="DevSheets - The Spreadsheet Built for Developers, Not Accountants" 
+  description="Filter with code expressions, see your data pipeline, and analyze CSV, Excel, and JSON files. Built for developers who are tired of fighting Excel. Free & open source."
+  keywords="spreadsheet software, data analysis tool, CSV viewer, Excel alternative, developer tools, open source spreadsheet, data visualization, TypeScript, React, pivot tables, data filtering, expression-based filtering"
 >
   <Navbar client:load />
   <Hero client:load />
   <Stats client:visible />
   <Features client:visible />
   <UseCases client:visible />
+  <SocialProof client:visible />
   <TechStack client:visible />
   <Comparison client:visible />
+  <Blog client:visible />
   <QuickStart client:visible />
   <CTA client:visible />
   <Footer />

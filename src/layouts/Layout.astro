@@ -8,7 +8,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Developer-friendly spreadsheet for data analysis. Expression-based filters, transparent pivots, and composable pipelines. Open source, cross-platform, and built for power users.",
+  description = "The spreadsheet built for developers, not accountants. Filter with code expressions, see your data pipeline, and analyze CSV, Excel, and JSON files. Free & open source.",
   keywords = "spreadsheet, data analysis, developer tools, CSV, Excel, open source, TypeScript, React, data visualization, pivot tables, filtering, sorting",
   ogImage = "/og-image.svg"
 } = Astro.props;
@@ -40,10 +40,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://devsheets.netlify.app/hero_banner.png" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.url)} />
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
