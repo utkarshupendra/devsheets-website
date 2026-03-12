@@ -103,4 +103,50 @@ const { title, description, pubDate, readTime } = frontmatter;
       transform: translateY(0);
     }
   }
+
+  /* Force light text colors on dark background - override prose defaults */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    color: #ffffff !important;
+  }
+
+  .prose p,
+  .prose li,
+  .prose td {
+    color: #cbd5e1 !important;
+  }
+
+  .prose pre {
+    background-color: rgba(30, 41, 59, 0.5) !important;
+    color: #e2e8f0 !important;
+  }
+
+  .prose code {
+    color: #93c5fd !important;
+    background-color: rgba(30, 41, 59, 0.5) !important;
+  }
+
+  .prose a {
+    color: #60a5fa !important;
+  }
+
+  .prose a:hover {
+    color: #93c5fd !important;
+  }
+
+  .prose strong {
+    color: #ffffff !important;
+  }
+
+  .prose blockquote {
+    color: #cbd5e1 !important;
+  }
+
+  .prose th {
+    color: #ffffff !important;
+  }
 </style>
