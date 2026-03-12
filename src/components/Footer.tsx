@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 text-slate-400 text-sm sm:text-base text-center">
             <span>Built with</span>
             <Heart size={16} className="text-red-500 fill-red-500" aria-hidden="true" />
-            <span>by the open source community</span>
+            <span>for developers who are tired of fighting Excel</span>
           </div>
 
           <nav className="flex items-center gap-6" aria-label="Social links">

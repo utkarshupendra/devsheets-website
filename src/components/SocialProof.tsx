@@ -10,9 +10,9 @@ const metrics = [
   },
   {
     icon: GitFork,
-    label: 'Community',
-    value: 'Growing',
-    description: 'Active contributors',
+    label: 'Cross-Platform',
+    value: 'Desktop App',
+    description: 'macOS, Windows, Linux',
   },
   {
     icon: Users,
@@ -66,7 +66,7 @@ export default function SocialProof() {
           className="mt-12 text-center"
         >
           <p className="text-slate-400 text-sm sm:text-base">
-            Join developers who are tired of fighting Excel's hidden filters and menu diving
+            A spreadsheet for developers who are tired of fighting Excel's hidden filters and menu diving
           </p>
         </motion.div>
       </div>

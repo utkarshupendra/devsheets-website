@@ -21,7 +21,7 @@ export default function CTA() {
             Your Data Analysis?
           </h2>
           <p className="text-slate-500 text-xs sm:text-sm md:text-xl text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Join developers who analyze CSV, Excel, and JSON data with code-like expressions and full transparency.
+            Analyze CSV, Excel, and JSON data with code-like expressions and full transparency.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 w-full sm:w-auto">
