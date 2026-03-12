@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Terminal, Package, Play } from 'lucide-react';
+import { Terminal, Package, Play, Download } from 'lucide-react';
 
 const steps = [
   {
@@ -34,48 +34,61 @@ export default function QuickStart() {
             Get Started in Minutes
           </h2>
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto px-4">
-            Build from source or download pre-built binaries for your platform.
+            Download pre-built binaries for your platform or build from source.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-slate-800/30 border border-slate-700 backdrop-blur-sm"
+          >
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Download Binary</h3>
+            <p className="text-slate-300 mb-4 text-sm sm:text-base">
+              Get the latest pre-built version for macOS, Windows, or Linux.
+            </p>
+            <a
+              href="https://github.com/utkarshupendra/devsheets/releases/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-colors text-sm sm:text-base"
             >
-              <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
-                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                    <step.icon className="text-blue-400" size={20} />
-                  </div>
-                  <h3 className="text-base sm:text-lg font-bold text-white">{step.title}</h3>
-                </div>
-                <pre className="p-3 sm:p-4 rounded-lg bg-slate-950 border border-slate-800 overflow-x-auto">
-                  <code className="text-xs sm:text-sm text-slate-300 font-mono whitespace-pre">{step.command}</code>
-                </pre>
-              </div>
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-gradient-to-r from-blue-500/50 to-transparent"></div>
-              )}
-            </motion.div>
-          ))}
+              <Download size={16} />
+              <span>Download Latest Release</span>
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-slate-800/30 border border-slate-700 backdrop-blur-sm"
+          >
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Build from Source</h3>
+            <div className="bg-slate-900/50 p-4 rounded-lg border border-slate-700 overflow-x-auto">
+              <code className="text-blue-300 text-sm">
+                git clone https://github.com/utkarshupendra/devsheets.git<br />
+                cd devsheets<br />
+                npm install<br />
+                npm run electron:dev
+              </code>
+            </div>
+          </motion.div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 text-center"
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 bg-slate-800/50 border border-slate-700 text-slate-400 rounded-lg text-center">
-            <span className="px-2 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded text-xs font-semibold">COMING SOON</span>
-            <span className="text-sm sm:text-base font-medium">Pre-built binaries for macOS, Windows & Linux</span>
+            <span className="text-sm sm:text-base font-medium">Supports CSV, TSV, JSON, Excel (XLSX, XLS)</span>
           </div>
         </motion.div>
       </div>

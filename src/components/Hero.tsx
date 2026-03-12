@@ -53,11 +53,11 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 px-4 w-full sm:w-auto"
         >
           <a
-            href="https://github.com/utkarshupendra/devsheets#installation"
+            href="https://github.com/utkarshupendra/devsheets/releases/latest"
             className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105 text-sm sm:text-base"
           >
             <Download size={18} />
-            <span>Build from Source</span>
+            <span>Download Now</span>
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 blur transition-opacity -z-10"></div>
           </a>
 

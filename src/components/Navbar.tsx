@@ -61,13 +61,13 @@ export default function Navbar() {
               <Github size={20} />
             </a>
             <a
-              href="https://github.com/utkarshupendra/devsheets#installation"
+              href="https://github.com/utkarshupendra/devsheets/releases/latest"
               className="px-3 sm:px-5 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm whitespace-nowrap"
               rel="noopener noreferrer"
               target="_blank"
             >
               <Download size={14} className="sm:w-4 sm:h-4" aria-hidden="true" />
-              <span>Get Started</span>
+              <span>Download</span>
             </a>
           </div>
         </div>
