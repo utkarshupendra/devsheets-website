@@ -6,25 +6,25 @@ const blogPosts = [
     title: 'The Spreadsheet Built for Developers, Not Accountants',
     excerpt: 'Why we built DevSheets and how it solves the hidden state problem in traditional spreadsheets.',
     readTime: '5 min read',
-    link: 'https://github.com/utkarshupendra/devsheets#readme',
+    link: '/blog/spreadsheet-for-developers',
   },
   {
     title: 'Expression-Based Filtering: Type Code, Not Click Menus',
     excerpt: 'Learn how to filter data with code expressions instead of clicking through endless menus.',
     readTime: '4 min read',
-    link: 'https://github.com/utkarshupendra/devsheets#features',
+    link: '/blog/expression-based-filtering',
   },
   {
     title: 'Visual Data Pipeline: See Every Transformation',
     excerpt: 'Understand your data transformations with a transparent, editable pipeline view.',
     readTime: '6 min read',
-    link: 'https://github.com/utkarshupendra/devsheets#readme',
+    link: '/blog/visual-data-pipeline',
   },
 ];
 
 export default function Blog() {
   return (
-    <section className="relative py-16 sm:py-24 md:py-32 bg-slate-900">
+    <section id="blog" className="relative py-16 sm:py-24 md:py-32 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

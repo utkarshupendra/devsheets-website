@@ -1,0 +1,105 @@
+---
+import Layout from './Layout.astro';
+import { ArrowLeft } from 'lucide-react';
+
+const { frontmatter } = Astro.props;
+const { title, description, pubDate, readTime } = frontmatter;
+---
+
+<Layout title={title} description={description}>
+  <div class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <!-- Back Button -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-24 pb-8">
+      <a 
+        href="/#blog" 
+        class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 text-sm"
+      >
+        <ArrowLeft size={16} />
+        <span>Back to website</span>
+      </a>
+    </div>
+
+    <!-- Article Header -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 pb-24">
+      <header class="mb-12">
+        <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+          <time datetime={pubDate}>{new Date(pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+          {title}
+        </h1>
+        <p class="text-xl text-slate-400 leading-relaxed">
+          {description}
+        </p>
+      </header>
+
+      <!-- Article Content -->
+      <div class="prose prose-invert prose-lg max-w-none
+        prose-headings:font-bold prose-headings:text-white
+        prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-12
+        prose-h2:text-3xl prose-h2:mb-4 prose-h2:mt-10
+        prose-h3:text-2xl prose-h3:mb-3 prose-h3:mt-8
+        prose-p:text-slate-300 prose-p:leading-relaxed prose-p:mb-6
+        prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300 hover:prose-a:underline
+        prose-strong:text-white prose-strong:font-semibold
+        prose-code:text-blue-300 prose-code:bg-slate-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+        prose-pre:bg-slate-900 prose-pre:border prose-pre:border-slate-700 prose-pre:rounded-xl
+        prose-ul:text-slate-300 prose-ul:mb-6
+        prose-ol:text-slate-300 prose-ol:mb-6
+        prose-li:mb-2
+        prose-blockquote:border-l-blue-500 prose-blockquote:text-slate-400
+        prose-table:text-slate-300
+        prose-th:text-white
+        prose-hr:border-slate-700
+      ">
+        <slot />
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="mt-16 p-8 rounded-2xl bg-gradient-to-br from-blue-950/50 to-purple-950/50 border border-slate-700">
+        <h3 class="text-2xl font-bold text-white mb-4">Try DevSheets</h3>
+        <p class="text-slate-300 mb-6">
+          Experience the difference. Download DevSheets and see how expression-based filtering and visual pipelines transform your data analysis workflow.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://github.com/utkarshupendra/devsheets#installation"
+            class="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 text-center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Build from Source
+          </a>
+          <a
+            href="https://github.com/utkarshupendra/devsheets"
+            class="px-6 py-3 bg-white/5 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Star on GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</Layout>
+
+<style>
+  /* Additional custom styles for blog content */
+  article {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
